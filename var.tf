@@ -11,3 +11,5 @@ variable "clientSecret" {}
 variable "tenantId" {}
 variable "instcount" {}
 variable "hardwaretype" {}
+variable "environment" {}
+variable "owner"{}
