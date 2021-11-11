@@ -27,7 +27,9 @@ resource "azurerm_network_interface" "myterraformnic" {
     }
 
     tags = {
-        environment = "Terraform Demo"
+        environment = "${var.environment}"
+        owner = "${var.owner}"
+        
     }
 }
 
@@ -95,8 +97,10 @@ resource "azurerm_virtual_machine" "myterraformvm" {
         storage_uri = "${azurerm_storage_account.mystorageaccount.primary_blob_endpoint}"
     }
 
-    tags = {
-        environment = "Terraform Demo"
+     tags = {
+        environment = "${var.environment}"
+        owner = "${var.owner}"
+        
     }
 }
 
