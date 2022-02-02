@@ -29,6 +29,7 @@ resource "azurerm_network_interface" "myterraformnic" {
     tags = {
         environment = "${var.environment}"
         owner = "${var.owner}"
+        costcenter = "${var.costcenter}"
         
     }
 }
