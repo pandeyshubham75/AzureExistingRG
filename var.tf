@@ -13,3 +13,4 @@ variable "instcount" {}
 variable "hardwaretype" {}
 variable "environment" {}
 variable "owner"{}
+variable "costcenter"{}
