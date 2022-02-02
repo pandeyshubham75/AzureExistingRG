@@ -101,6 +101,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
      tags = {
         environment = "${var.environment}"
         owner = "${var.owner}"
+        costcenter = "${var.costcenter}"
         
     }
 }
