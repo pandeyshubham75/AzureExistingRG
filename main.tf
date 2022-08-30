@@ -63,6 +63,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
     resource_group_name   = "${data.azurerm_resource_group.myterraformgroup.name}"
     network_interface_ids = ["${element(azurerm_network_interface.myterraformnic.*.id, count.index)}"]
     vm_size               = "${var.hardwaretype}"
+    delete_os_disk_on_termination = true
 
     storage_os_disk {
         name              = "myOsDisk-${count.index}${random_id.randomId.hex}"
